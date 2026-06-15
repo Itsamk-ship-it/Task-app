@@ -50,7 +50,7 @@ npm install
 Open two terminals:
 
 ```bash
-# Terminal 1 — API server (port 3001)
+# Terminal 1 — API server (port 3000)
 cd server
 npm run dev
 

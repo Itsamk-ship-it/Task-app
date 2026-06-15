@@ -7,7 +7,7 @@ let socket: Socket | null = null;
 
 function getSocket(): Socket {
   if (!socket) {
-    socket = io("http://localhost:3001", { autoConnect: false });
+    socket = io(window.location.origin, { autoConnect: false });
   }
   return socket;
 }
