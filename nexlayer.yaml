@@ -1,0 +1,18 @@
+application:
+  name: neat-vale-task-app
+  pods:
+    - name: backend
+      image: "# filled by pipeline:backend"
+      path: /api
+      servicePorts:
+        - 3000
+      vars: {}
+    - name: frontend
+      image: "# filled by pipeline:frontend"
+      path: /
+      servicePorts:
+        - 3000
+      vars:
+        API_URL: "http://${backend:3000}"
+        NEXT_PUBLIC_API_URL: "http://${backend:3000}"
+        VITE_API_URL: "http://${backend:3000}"
